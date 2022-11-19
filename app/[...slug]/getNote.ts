@@ -11,6 +11,9 @@ export default async function getNote(slug: string[]) {
         Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
         Accept: "application/vnd.github.raw",
       },
+      next: {
+        revalidate: Infinity,
+      },
     }
   );
 
