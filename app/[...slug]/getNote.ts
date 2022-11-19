@@ -4,10 +4,6 @@ import { marked } from "marked";
 export default async function getNote(slug: string[]) {
   const path = slug.join("/");
 
-  console.log(
-    `https://api.github.com/repos/benborgers/nota/contents/${path}.md`
-  );
-
   const res = await fetch(
     `https://api.github.com/repos/benborgers/nota/contents/${path}.md`,
     {
