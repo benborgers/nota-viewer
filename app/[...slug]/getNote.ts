@@ -12,7 +12,7 @@ export default async function getNote(slug: string[]) {
     `https://api.github.com/repos/benborgers/nota/contents/${path}.md`,
     {
       headers: {
-        Authorization: `Bearer ${GITHUB_TOKEN}`,
+        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
         Accept: "application/vnd.github.raw",
       },
     }
